@@ -1,13 +1,9 @@
-// let mySwiper = new Swiper(".swiper", {
-//
-// });
-
 const swiper = new Swiper(".swiper-container", {
   speed: 200,
   slidesPerView: 2,
   // spaceBetween: 80,
   effect: "cards",
-  // loop: true,
+  loop: true,
   navigation: {
     nextEl: ".arrow-right",
     prevEl: ".arrow-left",
@@ -22,34 +18,57 @@ const VideoController = function (isHovering, videoElement) {
   }
 };
 
-const accordionTitle = document.querySelectorAll(".item-title");
-const accordionContent = document.querySelectorAll(".item-text");
+// history block accordion
+const accordionTitle = document.querySelectorAll(
+  ".history__accordion-item .item__title"
+);
+const accordionContent = document.querySelectorAll(
+  ".history__accordion-item .item__text"
+);
 
-const disabled = () => {
+const disabled = (item) => {
   accordionContent.forEach((elem) => {
-    elem.classList.remove("active");
+    if (item !== elem) {
+      elem.classList.remove("active");
+    }
   });
 };
 
 accordionTitle.forEach((elem, index) => {
   elem.addEventListener("click", () => {
-    disabled();
-    accordionContent[index].classList.add("active");
+    disabled(accordionContent[index]);
+    accordionContent[index].classList.toggle("active");
   });
 });
 
-const accordionTitleFeature = document.querySelectorAll(".item-feature-title");
-const accordionContentFeature = document.querySelectorAll(".item-feature-text");
-console.log(accordionTitle, accordionTitleFeature);
-const disabledFeature = () => {
+// Feature block accordion
+const accordionTitleFeature = document.querySelectorAll(
+  ".feature__accordion-item .item__title"
+);
+const accordionContentFeature = document.querySelectorAll(
+  ".feature__accordion-item .item__text"
+);
+
+const disabledFeature = (item) => {
   accordionContentFeature.forEach((elem) => {
-    elem.classList.remove("active");
+    if (elem !== item) {
+      elem.classList.remove("active");
+    }
   });
 };
 
 accordionTitleFeature.forEach((elem, index) => {
   elem.addEventListener("click", () => {
-    disabledFeature();
-    accordionContentFeature[index].classList.add("active");
+    accordionContentFeature[index].classList.toggle("active");
+    disabledFeature(accordionContentFeature[index]);
   });
+});
+
+// HEADER
+let menuBtn = document.querySelector(".header__menu-button");
+let header = document.querySelector(".header__menu .menu__list");
+
+menuBtn.addEventListener("click", function () {
+  menuBtn.classList.toggle("active");
+  header.classList.toggle("active");
 });
