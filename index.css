@@ -119,9 +119,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding-top: 30px;
   position: fixed;
   z-index: 999;
@@ -277,7 +276,7 @@ body {
 }
 
 .main {
-  background-image: url("img/bg.jpg");
+  background-image: url("img/bg.webp");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,7 +475,7 @@ body {
 }
 
 .team {
-  background-image: url("img/bg-3.jpg");
+  background-image: url("img/bg-3.webp");
   font-family: Playfair Display;
   padding-bottom: 15px;
 }
@@ -559,7 +558,7 @@ body {
 }
 
 .history {
-  background-image: url("img/bg-2.jpg");
+  background-image: url("img/bg-2.webp");
   min-height: 100vh;
   position: relative;
   font-family: "Playfair Display", serif;
@@ -667,7 +666,7 @@ body {
   position: absolute;
   height: 250px;
   width: 440px;
-  background-image: url("img/planeta-2.jpg");
+  background-image: url("img/planeta-2.webp");
   top: 250px;
   right: 150px;
   z-index: 2;
@@ -813,7 +812,7 @@ body {
 
 .info {
   font-family: Playfair Display;
-  background-image: url("img/bg-5.png");
+  background-image: url("img/bg-5.webp");
   color: #fff;
 }
 
@@ -826,6 +825,7 @@ body {
 .info__body {
   width: 60%;
   z-index: 99;
+  margin-bottom: 50px;
 }
 
 .info__title {
@@ -870,7 +870,7 @@ body {
   position: absolute;
   height: 250px;
   width: 440px;
-  background-image: url("img/planeta-4.png");
+  background-image: url("img/planeta-4.webp");
   top: 250px;
   right: 150px;
   z-index: 2;
@@ -913,8 +913,210 @@ body {
   }
 }
 
+.moon {
+  font-family: Playfair Display;
+  background-image: url("img/bg-8.webp");
+  color: #fff;
+}
+
+.moon__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.moon__body {
+  width: 60%;
+  z-index: 99;
+  margin-bottom: 50px;
+}
+
+.moon__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 140px;
+  line-height: 283px;
+  color: black;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
+}
+
+.moon__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.moon__images {
+  width: 40%;
+  position: relative;
+}
+
+.moon__images img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-top: 100px;
+  display: block;
+  float: right;
+  z-index: 6;
+}
+
+.moon__images::before {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 400px;
+  background-image: url("img/planet-6.webp");
+  top: 250px;
+  right: 150px;
+  z-index: 2;
+}
+
+@media (max-width: 780px) {
+  .moon__title {
+    font-size: 80px;
+    line-height: 162px;
+    margin-bottom: 30px;
+  }
+  .moon__text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .moon__images img {
+    width: 160px;
+    height: 160px;
+  }
+  .moon__images::before {
+    background-size: cover;
+    height: 150px;
+    width: 240px;
+    top: 150px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 660px) {
+  .moon__body {
+    width: 100%;
+  }
+  .moon__images {
+    width: 0%;
+  }
+}
+
+.facts {
+  background-image: url("img/bg-2.webp");
+  min-height: 100vh;
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+
+.facts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.facts__info {
+  width: 70%;
+  position: relative;
+  z-index: 30;
+}
+
+.facts__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 120px;
+  line-height: 192px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.facts__suptitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #ffffff;
+}
+
+.facts__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.facts__images {
+  width: 30%;
+  position: relative;
+}
+
+.facts__images img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-top: 100px;
+  display: block;
+  float: right;
+  z-index: 6;
+}
+
+.facts__images::before {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 440px;
+  background-image: url("img/planeta-8.webp");
+  top: 250px;
+  right: 50px;
+  z-index: 2;
+}
+
+@media (max-width: 780px) {
+  .facts__title {
+    font-size: 80px;
+    line-height: 162px;
+    margin-bottom: 30px;
+  }
+  .facts__suptitle {
+    font-size: 28px;
+    line-height: 64px;
+  }
+  .facts__text {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+  .facts__images img {
+    width: 160px;
+    height: 160px;
+  }
+  .facts__images::before {
+    background-size: cover;
+    height: 150px;
+    width: 240px;
+    top: 150px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 660px) {
+  .facts__info {
+    width: 100%;
+  }
+  .facts__images {
+    width: 0%;
+  }
+}
+
 .feature {
-  background-image: url("img/bg-6.png");
+  background-image: url("img/bg-6.webp");
   font-family: Playfair Display;
   padding-bottom: 100px;
 }
@@ -1027,7 +1229,7 @@ body {
 }
 
 .footer {
-  background-image: url("img/bg-7.png");
+  background-image: url("img/bg-7.webp");
   background-position: bottom center;
   width: 100%;
   font-family: Playfair Display;

@@ -63,6 +63,29 @@ accordionTitleFeature.forEach((elem, index) => {
     disabledFeature(accordionContentFeature[index]);
   });
 });
+// Facts block accordion
+const accordionTitleFacts = document.querySelectorAll(
+  ".facts__accordion-item .item__title"
+);
+const accordionContentFacts = document.querySelectorAll(
+  ".facts__accordion-item .item__text"
+);
+
+const disabledFacts = (item) => {
+  accordionContentFacts.forEach((elem) => {
+    if (elem !== item) {
+      elem.classList.remove("active");
+    }
+  });
+};
+
+accordionTitleFacts.forEach((elem, index) => {
+  elem.addEventListener("click", () => {
+    accordionContentFacts[index].classList.toggle("active");
+    disabledFacts(accordionContentFacts[index]);
+  });
+});
+
 
 // HEADER
 let menuBtn = document.querySelector(".header__menu-button");
