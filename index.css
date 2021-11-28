@@ -285,6 +285,19 @@ body {
           align-items: center;
   overflow: hidden;
   padding-left: 13%;
+  position: relative;
+}
+
+.main .line {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  top: 10px;
+  width: 50px;
+  background-image: url("img/Frame 37.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main__content {
@@ -423,6 +436,9 @@ body {
 @media (max-width: 982px) {
   .main {
     padding-left: 30px;
+  }
+  .main .line {
+    display: none;
   }
   .main__title {
     font-size: 60px;

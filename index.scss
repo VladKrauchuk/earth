@@ -99,6 +99,7 @@ body {
   min-height: 100vh;
 }
 
+
 // -----------------------  HEADER ----------------------------------
 .header {
   display: flex;
@@ -242,6 +243,19 @@ body {
   align-items: center;
   overflow: hidden;
   padding-left: 13%;
+  position: relative;
+  .line{
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    top: 10px;
+    width: 50px;
+    // height: 100vh;
+    background-image: url("img/Frame\ 37.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
   &__content {
     width: 40%;
   }
@@ -346,6 +360,9 @@ body {
 @media (max-width: 982px) {
   .main {
     padding-left: 30px;
+    .line {
+      display: none;
+    }
     &__title {
       font-size: 60px;
     }
